@@ -1,0 +1,9 @@
+<%- include('../partials/header') %>
+
+    <ul>
+        <% for(var i=0; i<skills.length; i++) { %>
+            <li>
+                <%= skills[i].name %> - <%= skills[i].learnt ? 'learnt' : 'not learnt' %>
+            </li>
+            <% } %>
+    </ul>

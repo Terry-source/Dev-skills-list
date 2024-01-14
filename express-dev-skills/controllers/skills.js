@@ -49,8 +49,7 @@ function update(req, res) {
 }
 
 function deleteOne(req, res) {
-    skillsDB.deleteOne(req.skill.id);
-
+    skillsDB.deleteOne(req.params.id);
     res.redirect('/skills');
 }
 

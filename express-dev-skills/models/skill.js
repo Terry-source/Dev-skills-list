@@ -43,11 +43,10 @@ function update(req, res) {
     res.json(skill);
 }
 
-function deleteOne(req, res) {
-    const skill = devSkillsDB.find(skill => skill.id === parseInt(req.params.id));
-    const index = devSkillsDB.indexOf(skill);
+function deleteOne(id) {
+    id = parseInt(id);
+    const index = devSkillsDB.findIndex(skill => skill.id === parseInt(req.params.id));
     devSkillsDB.splice(index, 1);
-    res.json(skill);
 }
 
 function updateLearnt(req, res) {

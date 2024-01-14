@@ -1,8 +1,101 @@
+/* public/css/styles.css */
+
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: Arial, sans-serif;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 a {
-  color: #00B7FF;
+  text-decoration: none;
+  color: darkblue;
+  padding: 2px 5px;
+  font-size: larger;
+}
+
+a:hover {
+  color: darkred;
+  text-decoration: underline;
+}
+
+button {
+  cursor: pointer;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  margin-left: 5px;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+.skill-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skill-details {
+  flex-grow: 1;
+}
+
+.skill-buttons {
+  /* adjust as needed */
+}
+
+.delete-btn {
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  margin-top: 15%;
+}
+
+.delete-btn:hover {
+  background-color: darkmagenta;
+}
+
+/* asked chatgpt for help making this look like a button */
+.addnew-btn {
+  display: inline-block;
+  /* Aligns like a button */
+  background-color: green;
+  /* Button background color */
+  color: white;
+  /* Text color */
+  padding: 10px 20px;
+  /* Add some padding */
+  text-decoration: none;
+  /* Remove underline */
+  border: none;
+  /* Remove border */
+  margin-bottom: 10px;
+  /* Margin below the button */
+  border-radius: 5px;
+  /* Optional: for rounded corners */
+  /* Add any other styling properties you need */
+}
+
+/* asked chatgpt for help making this look like a button */
+.addnew-btn:hover {
+  color: white;
+  /* Text color */
+  background-color: darkgreen;
+  /* Slightly darker on hover for visual feedback */
+}
+
+.addnew-btn-container {
+  text-align: center;
 }

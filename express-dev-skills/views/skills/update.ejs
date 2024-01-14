@@ -1,0 +1,9 @@
+<%- include('../partials/header') %>
+
+    <form action="/skills" method="PUT" autocomplete="off">
+        <label for="name">Name</label>
+        <input type="text" name="name" value="<%= skill.name %>">
+        <label for="learnt">Learnt</label>
+        <input type="checkbox" name="learnt" <%=skill.learnt ? 'learnt' : 'not learnt' %>>
+        <button>Update</button>
+    </form>

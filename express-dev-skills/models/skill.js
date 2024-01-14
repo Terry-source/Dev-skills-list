@@ -12,19 +12,28 @@ const devSkillsDB = [
 ];
 
 function getAll(req, res) {
-    res.json(devSkillsDB);
+    // res.json(devSkillsDB);
+    return devSkillsDB;
 }
 
-function getOne(req, res) {
-    const skill = devSkillsDB.find(skill => skill.id === parseInt(req.params.id));
-    res.json(skill);
+function getOne(skillId) {
+    // Use Array.find to get the skill with the matching id
+    const skill = devSkillsDB.find(skill => skill.id === skillId);
+
+    // Check if the skill exists before trying to access its properties
+    if (!skill) {
+        return null; // or handle the error in an appropriate way
+    }
+
+    return skill;
 }
 
-function create(req, res) {
-    const newSkill = req.body;
+function create(newSkill) {
+    // const newSkill = req.body;
     newSkill.id = devSkillsDB[devSkillsDB.length - 1].id + 1;
+    newSkill.learnt = false;
     devSkillsDB.push(newSkill);
-    res.json(newSkill);
+    // res.json(newSkill);
 }
 
 function update(req, res) {

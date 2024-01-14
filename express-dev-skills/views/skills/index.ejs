@@ -1,9 +1,12 @@
 <%- include('../partials/header') %>
 
+    <a href="/skills/new">Add a new skill</a>
+
     <ul>
         <% for(var i=0; i<skills.length; i++) { %>
             <li>
-                <%= skills[i].name %> - <%= skills[i].learnt ? 'learnt' : 'not learnt' %>
+                <a href="/skills/<%= skills[i].id %>">
+                    <%= skills[i].name %> - <%= skills[i].learnt ? 'learnt' : 'not learnt' %>
             </li>
             <% } %>
     </ul>

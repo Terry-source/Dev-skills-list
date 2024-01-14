@@ -1,0 +1,12 @@
+<%- include('../partials/header') %>
+
+    <h2>
+        The <%= skill.name %> skill has <%= skill.learnt ? ' been learnt' : 'not been learnt yet' %>
+    </h2>
+
+    <form action="/skills/<%= skill.id %>?_method=DELETE" method="POST">
+        <button>Delete</button>
+    </form>
+    <form action="/skills/<%= skill.id %>?_method=PUT" method="POST">
+        <button>Update</button>
+    </form>

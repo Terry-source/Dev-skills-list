@@ -1,9 +1,11 @@
+<!-- //views/skills/new.ejs -->
+
 <%- include('../partials/header') %>
 
-    <form action="/skills" method="POST" autocomplete="off">
-        <label for="name">Name</label>
-        <input type="text" name="name">
-        <label for="learnt">Learnt</label>
-        <input type="checkbox" name="learnt">
-        <button type="submit">Add todo</button>
-    </form>
+<form action="/skills" method="POST" autocomplete="off">
+  <label for="name">Name</label>
+  <input type="text" name="name" />
+  <label for="status">Status</label>
+  <input type="checkbox" name="learnt" />
+  <button type="submit">Add todo</button>
+</form>

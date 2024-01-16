@@ -1,12 +1,17 @@
 <%- include('../partials/header') %>
 
-    <h2>
-        The <%= skill.name %> skill has <%= skill.learnt ? ' been learnt' : 'not been learnt yet' %>
-    </h2>
+<h2>
+  The <%= skill.name %> skill has <%= skill.creditRating %> credit rating.
+</h2>
 
-    <form action="/skills/<%= skill.id %>?_method=DELETE" method="POST">
-        <button type="submit">Delete</button>
-    </form>
-    <form action="/skills/<%= skill.id %>?_method=PUT" method="POST">
-        <button type="submit">Update</button>
-    </form>
+<div class="skill-buttons">
+  <!-- Update -->
+  <form action="/skills/<%= skill.id %>?_method=PUT" method="POST">
+    <button type="submit">Update</button>
+  </form>
+
+  <!-- Delete -->
+  <form action="/skills/<%= skill.id %>?_method=DELETE" method="POST">
+    <button type="submit" class="delete-btn">Delete</button>
+  </form>
+</div>

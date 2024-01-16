@@ -3,6 +3,123 @@
 const devSkillsDB = [
   {
     id: 1,
+    name: "Commonwealth Bank of Australia",
+    issuerType: "Bank",
+    creditRating: "AA-",
+    keyStrengths: [
+      "Strong financial performance",
+      "Diversified business model",
+      "Leading market position in Australia",
+    ],
+    keyRisks: [
+      "Exposure to the Australian housing market",
+      "Regulatory risks",
+      "Competition from other financial institutions",
+    ],
+    investmentOutlook: "Positive",
+    latestReportLink:
+      "https://www.example.com/investment-reports/commbank-2024-01-16.pdf",
+  },
+  {
+    id: 2,
+    name: "Westpac Banking Corporation",
+    issuerType: "Bank",
+    creditRating: "A+",
+    keyStrengths: [
+      "Strong retail banking franchise",
+      "Growing wealth management business",
+      "Solid capital position",
+    ],
+    keyRisks: [
+      "Exposure to the Australian economy",
+      "Legacy issues from past misconduct",
+      "Technology risks",
+    ],
+    investmentOutlook: "Neutral",
+    latestReportLink:
+      "https://www.example.com/investment-reports/westpac-2024-01-15.pdf",
+  },
+  {
+    id: 3,
+    name: "National Australia Bank (NAB)",
+    issuerType: "Bank",
+    creditRating: "AA-",
+    keyStrengths: [
+      "Strong corporate and business banking",
+      "Focus on risk management",
+      "Growing digital capabilities",
+    ],
+    keyRisks: [
+      "Exposure to the resources sector",
+      "Competition from mortgage brokers",
+      "Compliance costs",
+    ],
+    investmentOutlook: "Neutral",
+    latestReportLink:
+      "https://www.example.com/investment-reports/nab-2024-01-16.pdf",
+  },
+  {
+    id: 4,
+    name: "Australia and New Zealand Banking Group (ANZ)",
+    issuerType: "Bank",
+    creditRating: "AA",
+    keyStrengths: [
+      "Strong presence in New Zealand",
+      "Focus on Asia-Pacific markets",
+      "Efficient cost structure",
+    ],
+    keyRisks: [
+      "Exposure to volatile emerging markets",
+      "Regulatory changes in New Zealand",
+      "Competition from foreign banks",
+    ],
+    investmentOutlook: "Cautious",
+    latestReportLink:
+      "https://www.example.com/investment-reports/anz-2024-01-16.pdf",
+  },
+  {
+    id: 5,
+    name: "Telstra Corporation Limited",
+    issuerType: "Telecommunications",
+    creditRating: "BBB+",
+    keyStrengths: [
+      "Dominant market position in Australia",
+      "Strong mobile network",
+      "Growing fiber optic network",
+    ],
+    keyRisks: [
+      "Competition from NBN Co",
+      "Regulatory pressure on pricing",
+      "Technological disruption",
+    ],
+    investmentOutlook: "Neutral",
+    latestReportLink:
+      "https://www.example.com/investment-reports/telstra-2024-01-16.pdf",
+  },
+  {
+    id: 6,
+    name: "Ausgrid",
+    issuerType: "Electricity utility",
+    creditRating: "AA-",
+    keyStrengths: [
+      "Regulated monopoly in New South Wales",
+      "Focus on network reliability and investment",
+      "Strong track record of financial performance",
+    ],
+    keyRisks: [
+      "Regulatory uncertainty",
+      "Competition from renewable energy sources",
+      "Cybersecurity threats",
+    ],
+    investmentOutlook: "Positive",
+    latestReportLink:
+      "https://www.example.com/investment-reports/ausgrid-2024-01-16.pdf",
+  },
+];
+
+const devSkillsDB1 = [
+  {
+    id: 1,
     name: "JavaScript",
     status: "Proficient",
     resources: [

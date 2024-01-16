@@ -60,7 +60,7 @@ button:hover {
   background-color: #d9534f;
   color: white;
   border: none;
-  margin-top: 15%;
+  margin-top: 12px;
 }
 
 .delete-btn:hover {

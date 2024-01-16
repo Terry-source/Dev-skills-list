@@ -257,28 +257,26 @@ function getOne(skillId) {
   return skill;
 }
 
-function create(newSkill) {
+function create(newElement) {
   // const newSkill = req.body;
-  newSkill.id = devSkillsDB[devSkillsDB.length - 1].id + 1;
-  newSkill.status = "Beginner";
-  devSkillsDB.push(newSkill);
+  newElement.id = devSkillsDB[devSkillsDB.length - 1].id + 1;
+  newElement.creditRating = "Unrated";
+  devSkillsDB.push(newElement);
   // res.json(newSkill);
 }
 
-function update(req, res) {
-  const skill = devSkillsDB.find(
-    (skill) => skill.id === parseInt(req.params.id)
-  );
+function update(id) {
+  id = parseInt(id);
+  // const index = devSkillsDB.findIndex((skill) => skill.id === id);
+  const skill = devSkillsDB.find((skill) => skill.id === id);
   skill.name = req.body.name;
-  skill.status = req.body.status;
-  res.json(skill);
+  skill.creditRating = req.body.creditRating;
+  // res.json(skill);
 }
 
 function deleteOne(id) {
   id = parseInt(id);
-  const index = devSkillsDB.findIndex(
-    (skill) => skill.id === parseInt(req.params.id)
-  );
+  const index = devSkillsDB.findIndex((skill) => skill.id === id);
   devSkillsDB.splice(index, 1);
 }
 

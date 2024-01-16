@@ -41,6 +41,13 @@ function getOne(req, res) {
   });
 }
 
+function updateExisting(req, res) {
+  res.render("skills/update", {
+    skill: req.skill,
+    heading: `Update Issuer: `, // ${req.skill.name}
+  });
+}
+
 function update(req, res) {
   req.skill.name = req.body.name;
   req.skill.learnt = req.body.learnt;
@@ -61,4 +68,5 @@ module.exports = {
   deleteOne,
   newOne,
   create,
+  updateExisting,
 };

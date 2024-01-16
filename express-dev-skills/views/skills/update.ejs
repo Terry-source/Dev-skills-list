@@ -1,9 +1,41 @@
 <%- include('../partials/header') %>
 
-    <form action="/skills" method="PUT" autocomplete="off">
-        <label for="name">Name</label>
-        <input type="text" name="name" value="<%= skill.name %>">
-        <label for="learnt">Learnt</label>
-        <input type="checkbox" name="learnt" <%=skill.learnt ? 'learnt' : 'not learnt' %>>
-        <button>Update</button>
-    </form>
+<!-- link script.js file
+<script src="/update.js"></script> -->
+
+<!-- display the issuer's details -->
+
+<form action="/skills" method="POST" autocomplete="on">
+  <label for="name">Name</label>
+  <input
+    type="text"
+    name="name"
+    id="skill-name-text-box"
+    value="<%= skill.name %>"
+    style="width: auto"
+  />
+  <label for="status">Rating</label>
+  <input
+    type="text"
+    name="creditRating"
+    id="credit-rating-text-box"
+    value="<%= skill.creditRating %>"
+    style="width: auto"
+  />
+  <button type="submit">Update issuer</button>
+</form>
+
+<!-- <script>
+  const nameTextBox = document.getElementById("skill-name-text-box");
+  const creditRatingTextBox = document.getElementById("credit-rating-text-box");
+
+  nameTextBox.addEventListener("input", () => {
+    nameTextBox.style.width = "auto";
+    nameTextBox.style.width = nameTextBox.scrollWidth + "px";
+  });
+
+  creditRatingTextBox.addEventListener("input", () => {
+    creditRatingTextBox.style.width = "auto";
+    creditRatingTextBox.style.width = creditRatingTextBox.scrollWidth + "px";
+  });
+</script> -->

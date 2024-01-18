@@ -52,8 +52,17 @@ button:hover {
   flex-grow: 1;
 }
 
-.skill-buttons {
-  /* adjust as needed */
+.update-btn {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  margin-top: 12px;
+  font-size: larger;
+}
+
+.update-btn:hover {
+  background-color: #2980b9;
+  font-size: larger;
 }
 
 .delete-btn {
@@ -61,10 +70,12 @@ button:hover {
   color: white;
   border: none;
   margin-top: 12px;
+  font-size: larger;
 }
 
 .delete-btn:hover {
   background-color: darkmagenta;
+  font-size: larger;
 }
 
 /* asked chatgpt for help making this look like a button */

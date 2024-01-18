@@ -257,10 +257,11 @@ function getOne(skillId) {
   return skill;
 }
 
-function create(newElement) {
-  // const newSkill = req.body;
+function create(element) {
+  const newElement = {};
   newElement.id = devSkillsDB[devSkillsDB.length - 1].id + 1;
-  newElement.creditRating = "Unrated";
+  newElement.name = element.name;
+  newElement.creditRating = element.creditRating;
   devSkillsDB.push(newElement);
   // res.json(newSkill);
 }

@@ -266,7 +266,7 @@ function create(element) {
   // res.json(newSkill);
 }
 
-function update(id) {
+function update(element) {
   id = parseInt(id);
   // const index = devSkillsDB.findIndex((skill) => skill.id === id);
   const skill = devSkillsDB.find((skill) => skill.id === id);

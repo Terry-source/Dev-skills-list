@@ -8,10 +8,10 @@ var skillsCtrl = require("../controllers/skills");
 router.get("/", skillsCtrl.index);
 router.get("/new", skillsCtrl.newOne);
 router.get("/:id", skillsCtrl.getSkillById, skillsCtrl.getOne);
-router.get("/update:id", skillsCtrl.getSkillById, skillsCtrl.showUpdateScreen);
+router.put("/update/:id", skillsCtrl.getSkillById, skillsCtrl.showUpdateScreen);
+router.put("/:id", skillsCtrl.getSkillById, skillsCtrl.update);
 
 router.post("/", skillsCtrl.create);
-router.put("/:id", skillsCtrl.update);
 router.delete("/:id/", skillsCtrl.deleteOne);
 
 module.exports = router;

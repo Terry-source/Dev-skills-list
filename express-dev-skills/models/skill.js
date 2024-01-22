@@ -266,13 +266,19 @@ function create(element) {
   // res.json(newSkill);
 }
 
-function update(element) {
-  id = parseInt(id);
-  // const index = devSkillsDB.findIndex((skill) => skill.id === id);
-  const skill = devSkillsDB.find((skill) => skill.id === id);
+function update(req, res) {
+  const index = devSkillsDB.findIndex(
+    (skill) => skill.id === parseInt(req.params.id)
+  );
+  const skill = devSkillsDB.find((skill) => skill.id === index);
+
+  // devSkillsDB.splice(index, 1);
+
+  console.log(skill);
+  skill.id = index;
   skill.name = req.body.name;
   skill.creditRating = req.body.creditRating;
-  // res.json(skill);
+  // devSkillsDB.push(skill);
 }
 
 function deleteOne(id) {

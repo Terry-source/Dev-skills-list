@@ -19,9 +19,17 @@
       <!-- Buttons -->
       <div class="skill-buttons">
         <!-- Update -->
-        <a href="/skills/update/<%= skills[i].id %>">
-          <button class="update-btn" type="button">Update</button>
-        </a>
+        <form
+          action="/skills/update/<%= skills[i].id %>?_method=PUT"
+          method="POST"
+        >
+          <button class="update-btn" type="submit">Update</button>
+        </form>
+        <!-- <div class="skill-details">
+          <a href="/skills/update/<%= skills[i].id %>" class="update-btn">
+            Update
+          </a>
+        </div> -->
 
         <!-- Delete -->
         <form action="/skills/<%= skills[i].id %>?_method=DELETE" method="POST">

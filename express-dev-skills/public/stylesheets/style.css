@@ -57,12 +57,12 @@ button:hover {
   color: white;
   border: none;
   margin-top: 12px;
-  font-size: larger;
+  font-size: 12px;
 }
 
 .update-btn:hover {
   background-color: #2980b9;
-  font-size: larger;
+  font-size: 12px;
 }
 
 .delete-btn {
@@ -70,12 +70,12 @@ button:hover {
   color: white;
   border: none;
   margin-top: 12px;
-  font-size: larger;
+  font-size: 12px;
 }
 
 .delete-btn:hover {
   background-color: darkmagenta;
-  font-size: larger;
+  font-size: 12px;
 }
 
 /* asked chatgpt for help making this look like a button */

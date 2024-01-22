@@ -44,10 +44,18 @@ function getOne(req, res) {
 }
 
 function showUpdateScreen(req, res) {
-  res.render(`/skills/update`, {
+  res.render(`skills/update`, {
     skill: req.skill,
+    skills: skillsDB.getAll(),
+    i: req.skill.id,
     heading: `Update ${req.skill.name}`,
   });
+}
+
+function update(req, res) {
+  skillsDB.update(req, res);
+
+  res.redirect("/skills");
 }
 
 function deleteOne(req, res) {
@@ -63,4 +71,5 @@ module.exports = {
   deleteOne,
   newOne,
   create,
+  update,
 };
